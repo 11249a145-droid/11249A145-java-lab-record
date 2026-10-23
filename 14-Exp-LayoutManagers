@@ -1,0 +1,74 @@
+14a)Flow Layout
+
+import java.awt.*;
+
+public class FlowDemo {
+    public static void main(String[] args) {
+        Frame f = new Frame("Flow Layout");
+
+        f.setLayout(new FlowLayout());
+
+        f.add(new Button("One"));
+        f.add(new Button("Two"));
+        f.add(new Button("Three"));
+
+        f.setSize(300, 200);
+        f.setVisible(true);
+    }
+}
+
+14b) BorderLayout
+
+import java.awt.*;
+
+public class BorderDemo {
+    public static void main(String[] args) {
+        Frame f = new Frame("Border Layout");
+
+        f.setLayout(new BorderLayout());
+
+        f.add(new Button("Header"), BorderLayout.NORTH);
+        f.add(new Button("Footer"), BorderLayout.SOUTH);
+        f.add(new Button("Menu"), BorderLayout.WEST);
+        f.add(new Button("Right"), BorderLayout.EAST);
+        f.add(new Button("Content"), BorderLayout.CENTER);
+
+        f.setSize(400, 300);
+        f.setVisible(true);
+    }
+}
+
+14c) GridLayout – Calculator
+
+import java.awt.*;
+
+public class GridDemo {
+    public static void main(String[] args) {
+        Frame f = new Frame("Calculator");
+
+        f.setLayout(new GridLayout(4, 4));
+
+        f.add(new Button("7"));
+        f.add(new Button("8"));
+        f.add(new Button("9"));
+        f.add(new Button("/"));
+
+        f.add(new Button("4"));
+        f.add(new Button("5"));
+        f.add(new Button("6"));
+        f.add(new Button("*"));
+
+        f.add(new Button("1"));
+        f.add(new Button("2"));
+        f.add(new Button("3"));
+        f.add(new Button("-"));
+
+        f.add(new Button("0"));
+        f.add(new Button("."));
+        f.add(new Button("="));
+        f.add(new Button("+"));
+
+        f.setSize(300, 300);
+        f.setVisible(true);
+    }
+}
