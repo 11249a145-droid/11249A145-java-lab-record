@@ -1,6 +1,12 @@
+6)Single Inheritance
+A company wants to manage employee salary details. All employees have common details such as employee ID, name, and basic salary. Permanent employees receive an additional HRA and DA.
+Tasks
+Create a superclass Employee.
+Create a subclass PermanentEmployee.
+Calculate the gross salary.
+Display all employee details.
 
 import java.util.Scanner;
-
 class Employee {
     int empId;
     String name;
