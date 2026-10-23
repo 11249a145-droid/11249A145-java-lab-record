@@ -1,0 +1,33 @@
+8)Multiple Inheritance Through Interfaces
+
+interface Father {
+    void fatherProperty();
+}
+
+interface Mother {
+    void motherProperty();
+}
+
+class Child implements Father, Mother {
+    public void fatherProperty() {
+        System.out.println("Father's Property");
+    }
+
+    public void motherProperty() {
+        System.out.println("Mother's Property");
+    }
+
+    void display() {
+        System.out.println("Child inherits properties from both interfaces");
+    }
+}
+
+public class MultipleInheritance {
+    public static void main(String[] args) {
+        Child c = new Child();
+
+        c.fatherProperty();
+        c.motherProperty();
+        c.display();
+    }
+}
