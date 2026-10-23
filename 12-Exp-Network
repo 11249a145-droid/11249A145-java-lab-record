@@ -1,1 +1,39 @@
+12.Client-Server Communication Using Socket Programming
 
+Server Program:
+import java.net.*;
+import java.io.*;
+
+public class Server {
+    public static void main(String[] args) throws Exception {
+
+        ServerSocket ss = new ServerSocket(5000);
+        Socket s = ss.accept();
+
+        System.out.println("Client Connected");
+
+        PrintWriter out = new PrintWriter(s.getOutputStream(), true);
+        out.println("Hello Client");
+
+        s.close();
+        ss.close();
+    }
+}
+
+Client Program:
+import java.net.*;
+import java.io.*;
+
+public class Client {
+    public static void main(String[] args) throws Exception {
+
+        Socket s = new Socket("localhost", 5000);
+
+        BufferedReader in =
+            new BufferedReader(new InputStreamReader(s.getInputStream()));
+
+        System.out.println("Server: " + in.readLine());
+
+        s.close();
+    }
+}
