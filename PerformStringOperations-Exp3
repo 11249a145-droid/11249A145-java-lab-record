@@ -1,3 +1,5 @@
+3a-A company wants to compare two employee names to check if they are working in the same department. Write a Java program using String functions.
+
 import java.util.Scanner;
 public class EmployeeNames{
     public static void main(String[]args){
@@ -12,3 +14,6 @@ public class EmployeeNames{
             System.out.println("Employee names are different.");
     }
 }
+
+3b-A library system needs to store and display details of 10 books using arrays. Write a Java program that takes input for book titles and prints only books starting with letter ‘A’.
+
