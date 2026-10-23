@@ -1,5 +1,10 @@
-import java.util.Scanner;
+7)Multilevel Inheritance
+A university wants to automate student result processing.
+Student stores student information.
+Marks stores marks in five subjects.
+Result calculates total, average, and grade.
 
+import java.util.Scanner;
 class Student {
     String name;
     int rollNo;
