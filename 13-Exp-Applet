@@ -1,0 +1,55 @@
+13a)Create a Java applet program that draws various geometric figures (rectangle, circle, line, triangle) to help students visualize shapes.
+
+import java.applet.*;
+import java.awt.*;
+
+public class Shapes extends Applet {
+    public void paint(Graphics g) {
+        g.drawRect(50, 50, 100, 80);
+        g.drawOval(200, 50, 80, 80);
+        g.drawLine(50, 180, 150, 180);
+
+        int x[] = {200, 250, 150};
+        int y[] = {150, 220, 220};
+
+        g.drawPolygon(x, y, 3);
+    }
+}
+
+13b)You need to design an applet that draws a red rectangle, a blue oval, and displays the message “Java Applets are fun!” in bold font
+
+import java.applet.*;
+import java.awt.*;
+
+public class MyApplet extends Applet {
+    public void paint(Graphics g) {
+        g.setColor(Color.RED);
+        g.drawRect(50, 50, 150, 80);
+
+        g.setColor(Color.BLUE);
+        g.drawOval(250, 50, 120, 80);
+
+        g.setColor(Color.BLACK);
+        g.setFont(new Font("Arial", Font.BOLD, 18));
+        g.drawString("Java Applets are fun!", 80, 180);
+    }
+}
+
+13c)Write a Java applet program that displays a simple human face (eyes, nose, mouth) or a house (roof, door, windows) using basic shapes.
+
+import java.applet.*;
+import java.awt.*;
+
+public class Face extends Applet {
+    public void paint(Graphics g) {
+        g.drawOval(80, 50, 200, 200);
+
+        g.fillOval(130, 110, 20, 20);
+        g.fillOval(210, 110, 20, 20);
+
+        g.drawLine(180, 130, 170, 170);
+        g.drawLine(170, 170, 190, 170);
+
+        g.drawArc(140, 160, 100, 60, 180, 180);
+    }
+}
