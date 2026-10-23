@@ -1,0 +1,65 @@
+10a) Order Placement and Order Delivery
+
+class OrderPlacement extends Thread {
+    public void run() {
+        System.out.println("Order Placed");
+    }
+}
+
+class OrderDelivery extends Thread {
+    public void run() {
+        System.out.println("Order Delivered");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        OrderPlacement t1 = new OrderPlacement();
+        OrderDelivery t2 = new OrderDelivery();
+
+        t1.start();
+        t2.start();
+    }
+}
+
+10b) Thread Counting from 1 to 5
+
+class Count extends Thread {
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(i);
+
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Count t = new Count();
+        t.start();
+    }
+}
+
+10c) Runnable Interface – Payment Processing
+
+class Payment implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Payment Processing...");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Payment p = new Payment();
+        Thread t = new Thread(p);
+
+        t.start();
+    }
+}
