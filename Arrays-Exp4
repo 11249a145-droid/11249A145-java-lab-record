@@ -1,3 +1,7 @@
+4-You are given an array that stores monthly sales of a shop for one year. Write a program to find the highest sales (maximum) and the lowest sales (minimum) from the array.
+A survey app wants to take 5 feedback ratings and calculate the average using arrays.
+
+
 public class Sales{
     public static void main(String[]args){
         int sales[]={2500,3200,1500,4100,2800,3900,2100,4600,3500,2900,3300,2700};
