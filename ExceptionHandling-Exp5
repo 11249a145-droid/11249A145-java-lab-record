@@ -1,3 +1,4 @@
+
 5a-A railway app wants to handle ArrayIndexOutOfBoundsException when accessing train codes stored in an array. Write a Java program.
     
 public class TrainException {
@@ -14,3 +15,21 @@ public class TrainException {
 
 5b-Write a Java program that demonstrates predefined exceptions (e.g., ArithmeticException, NumberFormatException) while reading age input.
     
+public class ExceptionDemo {
+    public static void main(String[] args){
+        try{
+            int a=10/0;
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("Arithmetic Exception Handled");
+        }
+        try{
+            int age=Integer.parseInt("ABC");
+        }
+        catch (NumberFormatException e)
+        {
+            System.out.println("Number Format Exception Handled");
+        }
+    }
+}
