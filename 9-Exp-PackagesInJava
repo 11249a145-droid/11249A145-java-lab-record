@@ -1,0 +1,44 @@
+9)A school application wants to create a package studentInfo with class Student having method displayInfo(). Import and use it in another file.
+
+STEPS TO CREATE
+
+Create a folder named PackageDemo.
+Create a subfolder named studentInfo.
+Create Student.java inside the studentInfo folder.
+Create Main.java inside the PackageDemo folder.
+Import the Student class into Main.java.
+Structure:
+PackageDemo
+│
+├── Main.java
+│
+└── studentInfo
+    ├── Student.java
+    └── Student.class
+Compile both Java files.
+Execute the program and display the output:
+PS C:\Users\Administrator\Desktop\PackageDemo> javac studentInfo/Student.java
+PS C:\Users\Administrator\Desktop\PackageDemo> javac Main.java
+PS C:\Users\Administrator\Desktop\PackageDemo> java Main
+Student Name: Yashaswini
+Course: CSE
+
+File 1: Student.java:code:
+package studentInfo;
+
+public class Student {
+    public void displayInfo() {
+        System.out.println("Student Name: Yashaswini");
+        System.out.println("Course: CSE");
+    }
+}
+
+File 2: Main.java:code:
+import studentInfo.Student;
+
+public class Main9 {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.displayInfo();
+    }
+}
